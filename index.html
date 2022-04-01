@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.shooter {
+			width: 100px; 
+			position: absolute; 
+			margin-left: 820px;	
+		}
+		.box {
+			background-image: url(game.png);
+			height: 1300px; 
+			background-size: 100% 100%;
+		}
+		.zombies {
+			width: 100px; 
+			position: absolute;
+			margin-left: 2020px;
+			transition: 0.5s;
+		}
+	</style>
+</head>
+<body>	
+	<h1 style="position: absolute; left: 320px; top: 300px;color: yellow" class="score">0</h1>
+	<div class="box" style="">
+		
+		
+
+		<!--ГОРОХИ-->
+	    <img class="shooter" src="peashooter.png"  style="top: 350px; " id="s1">		
+		<img class="shooter" src="peashooter.png"  style="top: 520px; " id="s2">	
+		<img class="shooter" src="peashooter.png"  style="top: 680px; " id="s3">	
+		<img class="shooter" src="peashooter.png"  style="top: 840px; " id="s4">
+		<img class="shooter" src="peashooter.png"  style="top: 1000px; " id="s5">
+
+
+		<!--ЗОМБИ-->
+		<img class="zombies" src="zombie1.png" style="top: 300px" id="z1">
+		<img class="zombies" src="zombie2.png" style="top: 480px" id="z2">
+		<img class="zombies" src="zombie2.png" style="top: 660px" id="z3">
+		<img class="zombies" src="zombie4.png" style="top: 840px" id="z4">
+		<img class="zombies" src="zombie4.png" style="top: 1020px" id="z5">
+	</div>
+<script>
+	let ml1 = 2020
+	let ml2 = 2020
+	let ml3 = 2020
+	let ml4 = 2020
+	let ml5 = 2020
+	let score = 0
+	let s1 = document.querySelectorAll('.zombies')
+	let a = document.querySelectorAll('.shooter')
+	let b = document.querySelector('.score')
+	s1[0].onclick = function () {
+		ml1 = ml1 - 150
+		s1[0].style.marginLeft = ml1 + 'px'
+		if (ml1 == 820) {
+			a[0].style.display = 'none'
+			score = score + 1
+			b.innerHTML = score
+			if (score == 2) {
+				s1[0].style.display = 'none'
+			}
+			if (score == 5) {
+				s1[0].style.display = "none"
+				s1[1].style.display = "none"
+				s1[2].style.display = "none"
+				s1[3].style.display = "none"
+				s1[4].style.display = "none"
+			}
+		}
+		if (ml1 < 820) {
+			ml1 = ml1 + 150
+			s1[0].style.marginLeft = ml1 + 'px'
+		}
+	}
+	s1[1].onclick = function () {
+		ml2 = ml2 - 150
+		s1[1].style.marginLeft = ml2 + 'px'
+		if (ml2 == 820) {
+			a[1].style.display = 'none'
+			score = score + 1
+			b.innerHTML = score
+			if (score == 2) {
+				s1[1].style.display = 'none'
+			}
+			if (score == 5) {
+				s1[0].style.display = "none"
+				s1[1].style.display = "none"
+				s1[2].style.display = "none"
+				s1[3].style.display = "none"
+				s1[4].style.display = "none"
+			}
+		}
+		if (ml2 < 820) {
+			ml2 = ml2 + 150
+			s1[1].style.marginLeft = ml2 + 'px'
+		}
+	}
+	s1[2].onclick = function () {
+		ml3 = ml3 - 150
+		s1[2].style.marginLeft = ml3 + 'px'
+		if (ml3 == 820) {
+			a[2].style.display = 'none'
+			score = score + 1
+			b.innerHTML = score
+			if (score == 2) {
+				s1[2].style.display = 'none'
+			}
+			if (score == 5) {
+				s1[0].style.display = "none"
+				s1[1].style.display = "none"
+				s1[2].style.display = "none"
+				s1[3].style.display = "none"
+				s1[4].style.display = "none"
+			}		}
+		if (ml3 < 820) {
+			ml3 = ml3 + 150
+			s1[2].style.marginLeft = ml3 + 'px'
+		}
+	}
+	s1[3].onclick = function () {
+		ml4 = ml4 - 150
+		s1[3].style.marginLeft = ml4 + 'px'
+		if (ml4 == 820) {
+			a[3].style.display = 'none'
+			score = score + 1
+			b.innerHTML = score
+			if (score == 2) {
+				s1[3].style.display = 'none'
+			}
+			if (score == 5) {
+				s1[0].style.display = "none"
+				s1[1].style.display = "none"
+				s1[2].style.display = "none"
+				s1[3].style.display = "none"
+				s1[4].style.display = "none"
+			}
+		}
+		if (ml4 < 820) {
+			ml4 = ml4 + 150
+			s1[3].style.marginLeft = ml4 + 'px'
+		}
+	}
+	s1[4].onclick = function () {
+		ml5 = ml5 - 150
+		s1[4].style.marginLeft = ml5 + 'px'
+		if (ml5 == 820) {
+			a[4].style.display = 'none'
+			score = score + 1
+			b.innerHTML = score
+			if (score == 2) {
+				s1[4].style.display = 'none'
+			}
+			if (score == 5) {
+				s1[0].style.display = "none"
+				s1[1].style.display = "none"
+				s1[2].style.display = "none"
+				s1[3].style.display = "none"
+				s1[4].style.display = "none"
+			}
+		}
+		if (ml5 < 820) {
+			ml5 = ml5 + 150
+			s1[4].style.marginLeft = ml5 + 'px'
+		}
+	}
+</script>
+</body>
+</html>
